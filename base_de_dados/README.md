@@ -13,6 +13,7 @@ Como os dados são carregados totalmente a cada carraga, as tabelas não são no
 <p></p>
 <p></p>
 
+### Diagrama.
 ![Alt text](../imagens/db_inventario.PNG)
 
 ### Consolidando dos dados.
