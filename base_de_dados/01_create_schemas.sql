@@ -7,7 +7,6 @@ GO
 --O schema será utilizado para agregar os objetos dos Gerenciadores de banco de dados
 CREATE SCHEMA [SGBD]
 GO
-
 -- O schema de auditoria.
 CREATE SCHEMA [auditing]
 GO
