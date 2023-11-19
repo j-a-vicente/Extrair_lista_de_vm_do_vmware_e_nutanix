@@ -1,5 +1,6 @@
 # Este script foi criado para extrair as VM do virtualizado VMware.
 
+
 #Parametro necessário para execução do script dentro do job
 Set-Location C:
 
@@ -19,7 +20,7 @@ TRUNCATE TABLE [staging].[VMware]"
 
 #Conectar no servidor do VMware
 # são varios servidor com isto estamos conectando apenas um nesta linha
-Connect-VIServer -Server vm00.aero.vms.contoso.com.br -User svc_usr__ext_vm@contoso.gov.br -Password P@ssw0rd2023 
+Connect-VIServer -Server vm01.vms.contoso.com.br -User svc_usr__ext_vm@contoso.gov.br -Password P@ssw0rd2023 
 
 
 #Iniciar a extração dos Usuários das VM no Nutanix
@@ -30,7 +31,7 @@ try{
     $vms = Get-VM | Select-Object Id, Name, PowerState, Notes, Guest, NumCpu, CoresPerSocket, MemoryMB, MemoryGB, VMHost,
     Folder, ResourcePoolId, ResourcePool, HARestartPriority, HAIsolationResponse, DrsAutomationLevel,
     VMSwapfilePolicy, VMResourceConfiguration, Version, HardwareVersion, PersistentId, GuestId,
-    UsedSpaceGB, ProvisionedSpaceGB, DatastoreIdList, CreateDate
+    UsedSpaceGB, ProvisionedSpaceGB, DatastoreIdList, CreateDate,@{N="IP";E={@($_.guest.IPAddress[0])}}
 
     }catch{
     Write-Output "Erro na extração."
@@ -40,7 +41,7 @@ try{
 
     #Loop que será usuado para transferir os dados da matriz para o banco de dados
     ForEach($vm in $vms){
-        #Write-Output $vm.Name
+        Write-Output $vm.Name
         #Para cada linha que a matriz percorre e inserido o valor na variável de destino.       
         $Id                      = $vm.Id
         $Name                    = $vm.Name
@@ -68,6 +69,7 @@ try{
         $ProvisionedSpaceGB      = $vm.ProvisionedSpaceGB
         $DatastoreIdList         = $vm.DatastoreIdList
         $CreateDate              = $vm.CreateDate     
+        $IP                      = $vm.ip
 
    #A variável "$SQLQuery" receberar o insert com os dados para ser executado no banco
    $SQLQuery = "USE $SQLDatabase
@@ -75,11 +77,11 @@ try{
    ([Id],[Name],[PowerState],[Notes],[Guest],[NumCpu],[CoresPerSocket],[MemoryMB],[MemoryGB],
     [VMHost],[Folder],[ResourcePoolId],[ResourcePool],[HARestartPriority],[HAIsolationResponse],
     [DrsAutomationLevel],[VMSwapfilePolicy],[VMResourceConfiguration],[Version],[HardwareVersion],
-    [PersistentId],[GuestId],[UsedSpaceGB],[ProvisionedSpaceGB],[DatastoreIdList],[CreateDate])
+    [PersistentId],[GuestId],[UsedSpaceGB],[ProvisionedSpaceGB],[DatastoreIdList],[CreateDate],[IP])
    VALUES  ('$Id','$Name','$PowerState','$Notes','$Guest','$NumCpu','$CoresPerSocket',Cast('$MemoryMB' as REAL),Cast('$MemoryGB' as REAL),
    '$VMHost','$Folder','$ResourcePoolId','$ResourcePool','$HARestartPriority','$HAIsolationResponse',
    '$DrsAutomationLevel','$VMSwapfilePolicy','$VMResourceConfiguration','$Version','$HardwareVersion',
-   '$PersistentId','$GuestId',Cast('$UsedSpaceGB' as REAL),Cast('$ProvisionedSpaceGB' as REAL),'$DatastoreIdList','$CreateDate');"        
+   '$PersistentId','$GuestId',Cast('$UsedSpaceGB' as REAL),Cast('$ProvisionedSpaceGB' as REAL),'$DatastoreIdList','$CreateDate','$ip');"        
 
    #Executa o comando de insert com os dados
    try{

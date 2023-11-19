@@ -1,6 +1,6 @@
-#
-# Este script foi criado para extrair os usuários e suas informações do Active Directory e inserir elas 
-# em um servido de banco dados para futuro tratamento.
+
+# Este script foi criado para extrair as VM do virtualizado Nutanix.
+
 # O script foi criado para ser executado de dentro de um JOB do agent do SQL Server.
 Import-Module Nutanix.Prism.Common -Prefix NTNX
 Import-Module Nutanix.Prism.PS.Cmds -Prefix NTNX
@@ -11,7 +11,6 @@ $SQLDatabase = "XXXXXXXXXX" # Nome da base de dados
 
 #Parametro necessário para execução do script dentro do job
 Set-Location C:
-
 
 # Limpeza da tabela de STAGE que reseberá os dados brutos
  $SQLQueryDelete = "USE $SQLDatabase
@@ -59,9 +58,6 @@ try{
         $vdiskFilePaths= $vm.vdiskFilePaths
         $diskCapacityInBytes= $vm.diskCapacityInBytes
         $description = $vm.description
-
-
-
    
    
    #A variável "$SQLQuery" receberar o insert com os dados para ser executado no banco
