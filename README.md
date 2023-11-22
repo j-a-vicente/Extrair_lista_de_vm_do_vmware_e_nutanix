@@ -1,5 +1,5 @@
 # Extraindo lista de VM dos vitalizadores VMware e Nutanix usando PowerShell gravando os dados no MS SQL Server e mostrando tudo no Power BI.
-#VMWarey #Nutanix #Powershell #PowerBI
+#VMWare #Nutanix #Powershell #PowerBI
 
 É com entusiasmo que apresento está proposta para ajudar na gestão de suas máquinas virtuais, combinando a eficiência dos virtualizadores VMware e Nutanix com a inteligência visual do Power BI, buscamos simplificar e otimizar a extração e apresentação de dados essenciais de suas máquinas virtuais.
 
