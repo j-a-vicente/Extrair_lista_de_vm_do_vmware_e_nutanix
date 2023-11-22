@@ -1,6 +1,6 @@
 # Consolidando os dados.
 
-Devidos a orgiem dos dados ser de dois lugares diferentes será preciso consolidar os dados em uma tabelas <b>[ServerHost].[Servidor]</b>. Foi desenvolvido duas <b>Stored Procedures</b> que vão executar está tafera.
+Devidos a origem dos dados ser de dois lugares diferentes será preciso consolidar os dados em uma tabelas <b>[ServerHost].[Servidor]</b>. Foi desenvolvido duas <b>Stored Procedures</b> que vão executar estás tarefas.
 
 
 Executar as SP de consolidação.

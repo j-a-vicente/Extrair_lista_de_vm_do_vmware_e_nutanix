@@ -1,6 +1,6 @@
 # Automatizando o processo de extração.
 
-A automação do processo de extração e consolidação será executada pelo MS SQL Agent, será criado um Job e todas as etapas seram configuradas no job.
+A automação do processo de extração e consolidação será executada pelo MS SQL Agent, será criado um Job e todas as etapas serão configuradas no job.
 
 Script de criação do job:
 ````

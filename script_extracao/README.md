@@ -21,7 +21,7 @@ Connect-NTNXPrismCentral -Server 127.0.0.1 -UserName loginNutanix@contoso.com.br
 ````
 
 # VMWare5x e VMWare6x:
-O script <b>[00_vm.ps1](/script_extracao/vmware_6x/00_vm.ps1)</b> é o responsavel por extrair os dados do servidor e gravar no banco de dados.
+O script <b>[00_vm.ps1](/script_extracao/vmware_6x/00_vm.ps1)</b> é o responsável por extrair os dados do servidor e gravar no banco de dados.
 
 Alter os parâmetros:
 

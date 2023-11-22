@@ -7,7 +7,7 @@
 
 + Instalar o mudulo VMWare5x:
 
-1. Copie os arquivos listado abaixo para um diretorio temporário e descompacte os arquivo <b>VVMware5x.zip</b>:
+1. Copie os arquivos listado abaixo para um diretório temporário e descompacte os arquivos <b>VVMware5x.zip</b>:
     + [VVMware5x.zip](/install_componetes/vmware5x/VMware5x.zip)
     + [VMware5x.z01](/install_componetes/vmware5x/VMware5x.z01)
     + [VMware5x.z02](/install_componetes/vmware5x/VMware5x.z02)

@@ -1,14 +1,14 @@
 # Estrutura de dados.
 
-Como os dados são carregados totalmente a cada carraga, as tabelas não são normatizadas e não exites chave extrangeira entre elas.
+Como os dados são transferidos por completos a cada carga, as tabelas não são normalizadas sendo assim não existes chave estrangeira entre elas.
 
 ### Tabelas
 |Schemas  |Tabelas   |Descrição  |
 |---|----|-----|
 |dbo | trilha | As trilhas dos ambientes "Produção","Homologação"....|
 |ServerHost | Servidor | A relação consolidade das VM. |
-|staging | NutanixVM | Carga temporaria Nutanix |  
-|staging | VMware    | Carga temporaria VMware |
+|staging | NutanixVM | Carga temporária Nutanix |  
+|staging | VMware    | Carga temporária VMware |
 
 <p></p>
 <p></p>
@@ -17,15 +17,15 @@ Como os dados são carregados totalmente a cada carraga, as tabelas não são no
 ![Alt text](../imagens/db_inventario.PNG)
 
 ### Consolidando dos dados.
-A consolidação das duas origens VMware e Nutanix são executadas atravez das Stored Procedures:
+A consolidação das duas origens VMware e Nutanix são executadas através das Stored Procedures:
 
 |Schema  |Stored Procedure                     | Descrição    |
 |--------|-------------------------------------|--------------|
-|staging |SP_carga_nx_ServerHost_Servidor      | Executar carga de dados na tabelas <b>ServerHost.Servidor</b> |
-|staging |SP_carga_VMware_ServerHost_Servidor  | Executar carga de dados na tabelas <b>ServerHost.Servidor</b> |
+|staging |SP_carga_nx_ServerHost_Servidor      | Executar carga de dados nas tabelas <b>ServerHost.Servidor</b> |
+|staging |SP_carga_VMware_ServerHost_Servidor  | Executar carga de dados nas tabelas <b>ServerHost.Servidor</b> |
 
 
-### Executa a consolidadção das VM
+### Executa a consolidação das VM
 A consolidação será executada em duas etapas:
 
 1. Execução das Stored Procedures.
