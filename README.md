@@ -28,6 +28,10 @@ A gestão eficaz de ambientes virtualizados é fundamental para o desempenho e s
 
 Ao unir o poder da automação do PowerShell com a capacidade de visualização avançada do Power BI, nosso projeto redefine a forma como você gerencia suas máquinas virtuais. Esteja no controle total da sua infraestrutura virtual, economize tempo e recursos, e impulsione a eficiência operacional com nossa solução inovadora.
 
-Descubra o futuro da gestão de máquinas virtuais. Descubra agora o projeto de extração e visualização de dados para VMware, Nutanix e Power BI com PowerShell.
+## Iniciar a implantação do projeto.
 
+1. Criando a base de dados.
+1. Instalando os componentes no PowerShell.
+1. Alterando os scripts de extração.
+1. Automatizando o processo de extração.
 

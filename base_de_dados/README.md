@@ -56,3 +56,8 @@ AND VW.Name IS NULL
 AND NX.vmName IS NULL
 AND AD.Name IS NULL
 ````
+
+## Criando a base de dados.
+
+Execute os scripts no servidor de banco de dados:
+1. 00_create_database.sql
