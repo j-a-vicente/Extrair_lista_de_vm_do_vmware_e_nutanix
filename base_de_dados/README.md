@@ -61,4 +61,5 @@ AND AD.Name IS NULL
 
 Execute os scripts no servidor de banco de dados:
 1. [00_create_database.sql](/base_de_dados/00_create_database.sql)
-1. 
+1. [01_create_schemas.sql](/base_de_dados/01_create_schemas.sql)
+1. [02_create_tables_sp.sql](/base_de_dados/02_create_tables_sp.sql)

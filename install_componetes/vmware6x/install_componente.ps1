@@ -10,6 +10,4 @@
 
 #Connect-VIServer -Server XXX-vcenter1 -User administrator@vsphere.local -Password XXXXXXXXXXXX
 
-Connect-VIServer -Server adm.vms.infraero.gov.br -User admin-abelardo -Password xxxxxxxxxx
-
 Get-VM 

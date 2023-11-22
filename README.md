@@ -30,8 +30,9 @@ Ao unir o poder da automação do PowerShell com a capacidade de visualização 
 
 ## Iniciar a implantação do projeto.
 
-1. Criando a base de dados.
-1. Instalando os componentes no PowerShell.
-1. Alterando os scripts de extração.
-1. Automatizando o processo de extração.
+1. [Criando a base de dados.](/base_de_dados/README.md)
+1. [Instalando os componentes no PowerShell.](/install_componetes/README.md)
+1. [Alterando os scripts de extração.](/script_extracao/README.md)
+1. [Consolidando os dados.](/base_de_dados/Consolidar_os_dados.md)
+1. [Automatizando o processo de extração.](/base_de_dados/Automatizando_%20o_processo_%20de_extracao.md)
 

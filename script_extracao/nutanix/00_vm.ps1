@@ -20,10 +20,10 @@ $SQLQuery1Output = Invoke-Sqlcmd -query $SQLQueryDelete -ServerInstance $SQLInst
 
 
 #Carrega a senha do usuário para conexão.
-$pass = ConvertTo-SecureString -string "BI@!nfr@16" -force -AsPlainText
+$pass = ConvertTo-SecureString -string "xxxxxxxx" -force -AsPlainText
 
 # Comando para conectar no servidor Central do Nutanix.
-Connect-NTNXPrismCentral -Server 10.0.17.42 -UserName svc-sede-bi@infraero.gov.br -Password $pass -AcceptInvalidSslCerts -ForcedConnection
+Connect-NTNXPrismCentral -Server 127.0.0.1 -UserName loginNutanix@contoso.com.br -Password $pass -AcceptInvalidSslCerts -ForcedConnection
 
 #Iniciar a extração dos Usuários das VM no Nutanix
 # A variável "$vms" é uma matriz que receberá o resultado do comando de extração das vm
