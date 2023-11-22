@@ -35,5 +35,5 @@ Ao unir o poder da automação do PowerShell com a capacidade de visualização 
 1. [Alterando os scripts de extração.](/script_extracao/README.md)
 1. [Consolidando os dados.](/base_de_dados/Consolidar_os_dados.md)
 1. [Automatizando o processo de extração.](/base_de_dados/Automatizando_%20o_processo_%20de_extracao.md)
-
+1. [Painel em Power BI Desktop.](/Power_BI/VMConsolidado.pbit)
 
